@@ -1,0 +1,12 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        map = {} #Create an empty hashmap
+
+        for index, number in enumerate(nums):  #Loop through both the index and number in the array nums
+            number2 = target - number          #Since number + number2 = target, we can rearrange to give this
+
+
+            if number2 in map:                 #If number2 is in the hashmap then we return the two indicies
+                return [map[number2], index]
+            
+            map[number] = index                #Add the number if it isn't there already
